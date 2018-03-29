@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小仓物品出借栏</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/addThing.css' />
+  </head>
+  <body>
+
+      <header id="header" class="">
+          <div id="chioce"><i>小仓出借添加栏</i>
+            <ul>
+              <a href="/"><li>物品栏</li></a>
+              <a href="/lending"><li>借出栏</li></a>
+              <a href="/maintain"><li>维修栏</li></a>
+              <a href="/using"><li>使用栏</li></a>
+            </ul>
+          </div>
+          <span class="err"><%= title %></span>
+      </header>
+
+      <div id="bk"></div>
+
+      <div id="add_body">
+        <form action="/addLending" method="post" accept-charset="utf-8" id="form_on">
+          <div><input type="text" id="name" name="name" value="" placeholder="它的名字是!!(物品名称)"></div>
+          <!-- <div>借出日期:<input type="text" id="money" name="money" value="" placeholder=""></div> -->
+          <!-- <div>分类:<input type="text" id="kid" name="kid" value="" placeholder=""></div> -->
+          <!-- 收藏日期:<input type="text" name="date" value="" placeholder=""> -->
+          <div><input type="text" id="use" name="use" value="" placeholder="你的名字是!!(借用人)"></div>
+          <div><input type="date" id="backDate" name="backDate" value="" placeholder="请输入归还日期"></div>
+          <div><input type="text" id="useCase" name="useCase" value="" placeholder="描述一下使用情况呗~(使用状况)"></div>
+          <div><input type="text" id="evaluate" name="evaluate" value="" placeholder="大爷, 给个好评再走(评论)"></div>
+          <div><button type="submit" id="submit">提交</button></div>
+        </form>
+      </div>
+
+      <script type="text/javascript" src="/javascripts/addlend.js"></script>
+
+  </body>
+</html>

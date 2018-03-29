@@ -1,0 +1,281 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+html{
+    font-size: 16px;
+}
+html,body,header,div,p,footer{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url('/images/13071988dc2q7ryqfkf007.jpg');
+    background-size: 100% 100%;
+}
+#bk{
+    height: 100%;
+    width: 100%;
+    background: white;
+    opacity: 0.8;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#header{
+    z-index: 99;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #9eccda;
+    width: 100%;
+}
+#chioce{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: 100;
+    padding-left: 2rem;
+    display: inline-block;
+}
+#chioce i:hover {
+    cursor:pointer;
+}
+#chioce:hover ul {
+    display: block;
+}
+#chioce ul{
+    display: none;
+    z-index: 99;
+    padding: 0;
+    margin: 0.1rem 0 0;
+    // border:1px solid black;
+    border-radius: 1rem;
+    background: #9eccda;
+}
+#chioce li{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#chioce a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    letter-spacing: 1rem;
+}
+#chioce li:hover {
+    background: #5f9eb1;
+}
+
+#more {
+    height: 3rem;
+    padding-top: 5rem;
+    line-height: 3rem;
+}
+#more a{
+    margin-right: 10rem;
+    float: right;
+    color: #7563fd;
+    text-decoration: none;
+}
+
+#more span{
+    float: left;
+    margin-top: 0.5rem;
+    margin-left: 5rem;
+    display: inline-block;
+    width: 25rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+#back{
+    float: right;
+    height: 2rem;
+    line-height: 2rem;
+    background: #ffa8a88c;
+    outline: none;
+    border: none;
+    padding: 0 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#more input {
+    float: left;
+    height: 2rem;
+    line-height: 2rem;
+    border: none;
+    width: 20rem;
+    background: #bdb9e8;
+    color: white;
+    outline: none;
+    padding-left: 0.5rem;
+    border-radius: 10px;
+}
+#more input::-webkit-input-placeholder{
+    color: white;
+}
+#more input::-moz-input-placeholder{
+    color: white;
+}
+#more input::-ms-input-placeholder{
+    color: white;
+}
+
+
+#body_left{
+    // margin-top: rem;
+    width: 95%;
+    border: 1px solid #9bde4d;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-spacing: 0px;
+    // overflow: hidden;
+}
+
+#cover{
+    overflow: auto;
+}
+#body_left tr,th,td {
+    height: 5rem;
+    text-align: center;
+}
+// #body_left tr {
+
+// }
+#body_left td {
+    padding: 0 5px;
+    // width: 95%;
+    border-bottom: 1px solid #9bde4d;
+    color: #088e38;
+}
+#body_left tr:nth-last-of-type(1) td {
+    border: none;
+}
+.alter{
+    padding: 3px 5px;
+    background: #8c8cf9;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.remove{
+    padding: 3px 5px;
+    background: #f96767;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+#form_on{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    // height: 400px;
+    margin: -200px 0 0 -25%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#form_on div {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+::-webkit-inner-spin-button { visibility: hidden; }    /*这是控制上下小箭头的*/
+#form_on input {
+    width: 100%;
+    height: 2rem;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d46363;
+    font-size: 1.1rem;
+    color: black;
+    // line-height: 2rem;
+}
+#submit {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #8585ff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 5px;
+    color: white;
+}
+
+// #form_on :first-child{
+//     padding: 0;
+//     width: 100%;
+//     // height: 0.5rem;
+//     // line-height: 0.5rem;
+// }
+#form_on #form_head{
+    padding: 0;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    overflow: hidden;
+}
+#form_head span {
+    float: right;
+    top: 0;
+    // background: red;
+    display: inline-block;
+    // width: 0%;
+    padding: 0.5rem 1rem;
+    height: 1rem;
+    line-height: 1rem;
+}
+#form_head span:hover{
+    background: red;
+    cursor: pointer;
+    color: white;
+}
+
+#window{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.alter:hover{
+    cursor:pointer;
+}
+
+.err {
+    height: 2.5rem;
+    display: inline-block;
+    line-height: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.25rem 0 0;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    // width: 12rem;
+    background:red;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+}

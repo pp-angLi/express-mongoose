@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小仓物品维护栏</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/addThing.css' />
+  </head>
+  <body>
+      <header id="header" class="">
+          <div id="chioce"><i>小仓维护添加栏</i>
+            <ul>
+              <a href="/"><li>物品栏</li></a>
+              <a href="/lending"><li>借出栏</li></a>
+              <a href="/maintain"><li>维修栏</li></a>
+              <a href="/using"><li>使用栏</li></a>
+            </ul>
+          </div>
+          <span class="err"><%= title %></span>
+      </header>
+
+      <div id="bk"></div>
+
+      <div id="add_body">
+        <form action="/addMaintain" method="post" accept-charset="utf-8" id="form_on">
+        <div><input type="text" id="name" name="name" value="" placeholder="它的名字是!!(物品名称)"></div>
+        <div><input type="text" id="reason" name="reason" value="" placeholder="不可描述吗? (维修原因)"></div>
+        <div><input type="text" id="end" name="end" value="" placeholder="(评价维修质量)"></div>
+        <!-- 收藏日期:<input type="text" name="date" value="" placeholder=""> -->
+        <div><input type="text" id="user" name="user" value="" placeholder="大哥留名!!(维修人员名字/单位)"></div>
+        <div><input type="text" id="money" name="money" value="" placeholder="不能让别人白来! (付费金额)"></div>
+        <div><button type="submit" id="submit">提交</button></div>
+      </form>
+      </div>
+
+      <script type="text/javascript" src="/javascripts/addMaintain.js"></script>
+
+  </body>
+</html>

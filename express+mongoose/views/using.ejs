@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小仓使用栏</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <header id="header" class="">
+          <div id="chioce"><i>小仓使用栏</i>
+            <ul>
+              <a href="/"><li>物品栏</li></a>
+              <a href="/lending"><li>借出栏</li></a>
+              <a href="/maintain"><li>维修栏</li></a>
+              <a href="#"><li>使用栏</li></a>
+            </ul>
+          </div>
+          <span class="err"><%= title %></span>
+      </header>
+
+      <div id="bk"></div>
+
+      <div id="more"><span><input type="search" placeholder="查询在这里哦" id="search"><button id="back">撤销</button></span><a href="/addUsing">添加</a></div>
+
+      <div id="cover">
+        <table id="body_left">
+            <tr>
+              <td  width="120px">名称</td>
+              <td width="240px">开始使用日期</td>
+              <td width="240px">结束使用日期</td>
+              <td >使用情况</td>
+              <td>评价</td>
+              <td width="120px">操作</td>
+            </tr>
+          <% for(var i in using) { %>
+            <tr class="table_test">
+            <td><%= using[i].name %></td>
+            <td><%= using[i].useDate %></td>
+            <td><%= using[i].backDate %></td>
+            <td><%= using[i].useCase %></td>
+            <td><%= using[i].evaluate %></td>
+            <td><a class="alter" onclick = "fix(this)" data-id="<%= using[i]._id %>">修改</a>  <a href="/removeUsing?id=<%= using[i].id %>" class="remove">删除</a></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+
+      <div id="window">
+        <form action="" method="post" accept-charset="utf-8" id="form_on">
+          <div id="form_head"><span id="x_remove">x</span></div>
+          <div><input type="text" id="name" name="name" value="" placeholder=""></div>
+          <div><input type="date" id="backDate" name="backDate" value="" placeholder=""></div>
+          <div><input type="text" id="useCase" name="useCase" value="" placeholder=""></div>
+          <div><input type="text" id="evaluate" name="evaluate" value="" placeholder=""></div>
+          <div><button type="submit" id="submit">提交</button></div>
+        </form>
+      </div>
+
+      <script src="/javascripts/all.js" type="text/javascript" charset="utf-8" async defer></script>
+      <script type="text/javascript" src="/javascripts/using.js"></script>
+
+  </body>
+</html>
