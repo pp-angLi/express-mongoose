@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小仓物品栏</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <header id="header" class="">
+          <div id="chioce"><i>小仓物品栏</i>
+            <ul>
+              <a href="#"><li>物品栏</li></a>
+              <a href="/lending"><li>借出栏</li></a>
+              <a href="/maintain"><li>维修栏</li></a>
+              <a href="/using"><li>使用栏</li></a>
+            </ul>
+          </div>
+          <span class="err"><%= title %></span>
+      </header>
+
+      <div id="bk"></div>
+
+      <div id="more"><span><input type="search" placeholder="查询在这里哦" id="search"><button id="back">撤销</button></span><a href="/addThing">添加</a></div>
+
+      <div id="cover">
+        <table id="body_left">
+            <tr>
+              <td  width="120px">名称</td>
+              <td width="120px">价格(元)</td>
+              <td width="120px">分类</td>
+              <td  width="240px">收藏日期</td>
+              <td>获取方式</td>
+              <td>存放位置</td>
+              <td width="120px">操作</td>
+            </tr>
+          <% for(var i in thing) { %>
+            <tr class="table_test">
+            <td><%= thing[i].name %></td>
+            <td><%= thing[i].money %></td>
+            <td><%= thing[i].kid %></td>
+            <td><%= thing[i].date %></td>
+            <td><%= thing[i].method %></td>
+            <td><%= thing[i].address %></td>
+            <td><a class="alter" onclick = "fix(this)" data-id="<%= thing[i]._id %>">修改</a>  <a href="/removeThing?name=<%= thing[i].name %>" class="remove">删除</a></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+
+      <div id="window">
+        <form action="" method="post" accept-charset="utf-8" id="form_on">
+          <div id="form_head"><span id="x_remove">x</span></div>
+          <div><input type="text" id="name" name="name" value="" placeholder=""></div>
+          <div><input type="text" id="money" name="money" value="" placeholder=""></div>
+          <div><input type="text" id="kid" name="kid" value="" placeholder=""></div>
+          <div><input type="text" id="method" name="method" value="" placeholder=""></div>
+          <div><input type="text" id="address" name="address" value="" placeholder=""></div>
+          <div><button type="submit" id="submit">提交</button></div>
+        </form>
+      </div>
+
+      <script src="/javascripts/all.js" type="text/javascript" charset="utf-8" async defer></script>
+      <script type="text/javascript" src="/javascripts/index.js"></script>
+
+  </body>
+</html>

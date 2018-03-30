@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小仓物品栏</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/addThing.css' />
+  </head>
+  <body>
+      <header id="header" class="">
+          <div id="chioce"><i>小仓物品添加栏</i>
+          <ul>
+              <a href="/"><li>物品栏</li></a>
+              <a href="/lending"><li>借出栏</li></a>
+              <a href="/maintain"><li>维修栏</li></a>
+              <a href="/using"><li>使用栏</li></a>
+            </ul>
+          </div>
+          <span class="err"><%= title %></span>
+      </header>
+
+      <div id="bk"></div>
+
+      <div id="add_body">
+        <form action="/addThing" method="post" accept-charset="utf-8" id="form_on">
+          <div><input type="text" id="name" name="name" value="" placeholder="它的名字是!!(物品名称)"></div>
+          <div><input type="text" id="money" name="money" value="" placeholder="天下没有免费的午餐!!(物品价格)"></div>
+          <div><input type="text" id="kid" name="kid" value="" placeholder="界门纲目科属种?(物品分类)"></div>
+          <!-- 收藏日期:<input type="text" name="date" value="" placeholder=""> -->
+          <div><input type="text" id="method" name="method" value="" placeholder="嘘,不是偷来的!(获取方式)"></div>
+          <div><input type="text" id="address" name="address" value="" placeholder="你们在哪里?(存放位置)"></div>
+          <div><button type="submit" id="submit">提交</button></div>
+        </form>
+      </div>
+
+
+      <script type="text/javascript" src="/javascripts/add.js"></script>
+
+  </body>
+</html>
