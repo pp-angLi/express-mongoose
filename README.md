@@ -70,4 +70,5 @@ mongoose.Schema按照我的理解就是创建一个表
 `app.set('views', path.join(__dirname, 'views'));`<br>
 `app.engine('html', ejs.__express);`<br>
 `app.set('view engine', 'html');`<br>
+(补:要在头顶引入var ejs = require('ejs');!!)<br>
 就可以将views文件夹下的.ejs模板 改成用.html作为模板, 同时也可以用ajax+jquery交互了!
